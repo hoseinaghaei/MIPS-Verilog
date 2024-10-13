@@ -1,0 +1,1876 @@
+docker run -ti -v /home/mahdi/project-mascarpone:/work												\
+		verilator/verilator:latest --exe --build --cc --top mips_machine	\
+				-Wno-BLKLOOPINIT											\
+				`find src 323src -iname '*.v' -o -iname '*.sv'`				\
+				323src/sim_main.cpp
+make: Entering directory '/work/obj_dir'
+ccache g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -std=gnu++14 -Os -c -o sim_main.o ../323src/sim_main.cpp
+/usr/bin/perl /usr/local/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vmips_machine.cpp Vmips_machine___024root__DepSet_dcc43fac__0.cpp Vmips_machine___024root__Slow.cpp Vmips_machine___024root__DepSet_dcc43fac__0__Slow.cpp Vmips_machine__Syms.cpp > Vmips_machine__ALL.cpp
+ccache g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -std=gnu++14 -Os -c -o Vmips_machine__ALL.o Vmips_machine__ALL.cpp
+echo "" > Vmips_machine__ALL.verilator_deplist.tmp
+Archive ar -rcs Vmips_machine__ALL.a Vmips_machine__ALL.o
+g++    sim_main.o verilated.o Vmips_machine__ALL.a      -o Vmips_machine
+rm Vmips_machine__ALL.verilator_deplist.tmp
+make: Leaving directory '/work/obj_dir'
+cp test/default/memtest0.mem output/instructions.mem
+./obj_dir/Vmips_machine
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  0, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  3, data: 10000000, address : 00001000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 000000ff, rt data : 000000ff, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 000000ff, rt data : 000000ff, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 000000ff, rt data : 000000ff, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 000000ff, rt data : 000000ff, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  5, data: 000000ff, address : 000000ff
+rs data : 000000ff, rt data : 000000ff, rs :  5, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 00000000, rt data : 00000000, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 000001fe, rt data : 000001fe, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 000001fe, rt data : 000001fe, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 000001fe, rt data : 000001fe, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 000001fe, rt data : 000001fe, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  6, data: 000001fe, address : 000000ff
+rs data : 000001fe, rt data : 000001fe, rs :  6, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 00000000, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 00000000, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 00000000, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 00000000, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 00000000, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 00000000, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 00000000, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 00000000, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 00000000, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 00000000, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 00000000, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 00000000, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 00000000, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 00000000, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 000003fc, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 000003fc, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 000003fc, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 000003fc, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  7, data: 000003fc, address : 000001fe
+rs data : 000003fc, rt data : 00000000, rs :  7, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  8, data: 0000792c, address : 0000792c
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000000
+rs data : 10000000, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000004
+rs data : 10000000, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 10000008
+rs data : 10000000, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 1000000c
+rs data : 10000000, rt data : 00000000, rs :  3, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  9, data: 00000000, address : 10000000
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 10, data: 00000000, address : 10000004
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 11, data: 00000000, address : 10000008
+rs data : 10000000, rt data : 00000000, rs :  3, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 12, data: 00000000, address : 1000000c
+rs data : 10000000, rt data : 10000000, rs :  3, rt :  3
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000000, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000004, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000004, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000004, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000004, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  3, data: 10000004, address : 10000004
+rs data : 10000004, rt data : 000000ff, rs :  3, rt :  5
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  5, data: 000000ff, address : 10000004
+rs data : 10000004, rt data : 000001fe, rs :  3, rt :  6
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  6, data: 000001fe, address : 10000008
+rs data : 10000004, rt data : 000003fc, rs :  3, rt :  7
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  7, data: 000003fc, address : 1000000c
+rs data : 10000004, rt data : 0000792c, rs :  3, rt :  8
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  3, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  2, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  1, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  6, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  5, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  4, alu_result_mem_enable_out : 1, reg_we: 0, chache_we : 0,  reg_num:  8, data: 0000792c, address : 10000010
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 13, data: 00000000, address : 10000000
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 14, data: 00000000, address : 10000004
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  6, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  5, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  4, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  3, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 15, data: 00000000, address : 10000008
+rs data : 10000004, rt data : 00000000, rs :  3, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  2, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  1, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 16, data: 00000000, address : 1000000c
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  9
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 10
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 11
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 12
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 13
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 14
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 15
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs : 17, rt : 16
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  0, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num: 17, data: 00000000, address : 00000000
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  2
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 18, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 17, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 16, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 15, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 14, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 13, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 12, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 11, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter: 10, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  9, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  8, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  7, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  6, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 0, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  5, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  4, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  3, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  2, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+block 0 : 00000000, block 1 : 00000000, block 2: 00000000, block 3 : 00000000
+counter:  1, cnt_mem :  0, alu_result_mem_enable_out : 0, reg_we: 1, chache_we : 0,  reg_num:  2, data: 0000000a, address : 0000000a
+rs data : 00000000, rt data : 00000000, rs :  0, rt :  0
+- 323src/mips_machine.sv:87: Verilog $finish
+=== Simulation Cycle 607 ===
+*** RegisterFile dump ***
+r 0 = 0x00000000
+r 1 = 0x00000000
+r 2 = 0x0000000a
+r 3 = 0x10000004
+r 4 = 0x00000000
+r 5 = 0x000000ff
+r 6 = 0x000001fe
+r 7 = 0x000003fc
+r 8 = 0x0000792c
+r 9 = 0x00000000
+r10 = 0x00000000
+r11 = 0x00000000
+r12 = 0x00000000
+r13 = 0x00000000
+r14 = 0x00000000
+r15 = 0x00000000
+r16 = 0x00000000
+r17 = 0x00000000
+r18 = 0x00000000
+r19 = 0x00000000
+r20 = 0x00000000
+r21 = 0x00000000
+r22 = 0x00000000
+r23 = 0x00000000
+r24 = 0x00000000
+r25 = 0x00000000
+r26 = 0x00000000
+r27 = 0x00000000
+r28 = 0x00000000
+r29 = 0x00000000
+r30 = 0x00000000
+r31 = 0x00000000
+diff -u test/default/memtest0.reg output/regdump.reg 1>&2
